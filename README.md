@@ -6,7 +6,7 @@ PowerShell scripts for managing Milestone XProtect VMS systems, built on the [Mi
 
 - PowerShell 5.1+
 - MilestonePSTools module: `Install-Module MilestonePSTools -Scope CurrentUser`
-- Most scripts connect via a dialog on launch — no hardcoded credentials
+- Most scripts connect via a dialog on launch - no hardcoded credentials
 
 ---
 
@@ -25,7 +25,7 @@ Three scripts work together for rotating camera passwords across a site:
 ### Password Management
 | Script | Description |
 |---|---|
-| `Invoke-MilestonePasswordRotation.ps1` | Rotate camera passwords — single password, per-recorder, or retry failures from a previous report |
+| `Invoke-MilestonePasswordRotation.ps1` | Rotate camera passwords - single password, per-recorder, or retry failures from a previous report |
 | `Make-FailureReport.ps1` | Consolidates per-recorder rotation CSVs into a single categorized failure report |
 
 ### Reporting
@@ -35,15 +35,15 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-MilestoneCameraRoles.ps1` | Exports all cameras and their role/permission assignments |
 | `Get-VMSCameraReport.ps1` | Exports a full camera list to CSV |
 | `Get-VMSHardware.ps1` | Exports a hardware list to CSV |
-| `Custom-Hardware-Report.ps1` | Extended hardware report including firmware, MAC, serial, and password — **output CSV contains passwords, handle accordingly** |
+| `Custom-Hardware-Report.ps1` | Extended hardware report including firmware, MAC, serial, and password - **output CSV contains passwords, handle accordingly** |
 | `Device-Status.ps1` | Exports camera device status to CSV |
-| `Get-VMSLog_to_CSV.ps1` | Exports audit, system, and rules logs (last 3 days) to CSV |
+| `Get-VMSLog_to_CSV.ps1` | Exports audit, system, and rules logs to CSV |
 | `Export-VmsLicenseRequest.ps1` | Exports a license request file to Downloads |
 
 ### Hardware / Driver Management
 | Script | Description |
 |---|---|
-| `Mass-Hardware-Replace.ps1` | Auto-replaces drivers on all hardware (prompts for confirmation) |
+| `Mass-Hardware-Replace.ps1` | Auto-replaces drivers on all hardware |
 | `Selective-Hardware-Replace.ps1` | Select hardware via GridView, then pick the replacement driver |
 | `Hardware_Replace_By_Server.ps1` | Auto-replaces drivers per recording server (GridView server selection) |
 | `MassSelectDriver.ps1` | Select hardware via GridView and apply a specific driver |
@@ -52,7 +52,7 @@ Three scripts work together for rotating camera passwords across a site:
 | Script | Description |
 |---|---|
 | `Enable-HTTPS-Per-Recorder.ps1` | Enable or disable HTTPS on cameras, scoped to selected recording servers |
-| `Enable-HTTPS-All-Cams.ps1` | Enable HTTPS on all cameras at once (prompts for confirmation) |
+| `Enable-HTTPS-All-Cams.ps1` | Enable HTTPS on all cameras at once |
 
 ### Metadata
 | Script | Description |
@@ -62,7 +62,7 @@ Three scripts work together for rotating camera passwords across a site:
 ### Camera Groups
 | Script | Description |
 |---|---|
-| `Group-CamerasByModel.ps1` | Function — groups cameras by make/model into VMS device groups (dot-source to use) |
+| `Group-CamerasByModel.ps1` | Function - groups cameras by make/model into VMS device groups |
 
 ### Multi-Server Gather
 | Script | Description |
