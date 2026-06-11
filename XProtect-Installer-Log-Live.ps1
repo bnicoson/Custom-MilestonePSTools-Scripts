@@ -1,0 +1,1 @@
+﻿Get-Content 'C:\ProgramData\Milestone\Installer\installer.log' -wait -tail 10

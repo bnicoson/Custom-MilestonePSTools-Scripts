@@ -1,0 +1,11 @@
+# Server/IP lists - contain site-specific addresses, never commit these
+Servers.txt
+**/Servers.txt
+
+# Script output files
+*.csv
+Lists/
+
+# OS noise
+Thumbs.db
+.DS_Store

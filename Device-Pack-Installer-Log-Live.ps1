@@ -1,0 +1,1 @@
+﻿Get-Content 'C:\ProgramData\Milestone\XProtect Recording Server\Logs\DriverScan.log' -wait -tail 10
