@@ -34,6 +34,7 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-MilestoneUserCameraAccess.ps1` | Lists all cameras a specific user can access, with per-role permissions |
 | `Get-MilestoneCameraRoles.ps1` | Exports all cameras and their role/permission assignments |
 | `Get-VMSCameraReport.ps1` | Exports a full camera list to CSV |
+| `Get-CameraStorageByServer.ps1` | Per-camera recording storage used - select one or more recording servers, view in GridView (sortable by driver), optional CSV export |
 | `Get-VMSHardware.ps1` | Exports a hardware list to CSV |
 | `Custom-Hardware-Report.ps1` | Extended hardware report including firmware, MAC, serial, and password - **output CSV contains passwords, handle accordingly** |
 | `Device-Status.ps1` | Exports camera device status to CSV |
@@ -47,6 +48,8 @@ Three scripts work together for rotating camera passwords across a site:
 | `Selective-Hardware-Replace.ps1` | Select hardware via GridView, then pick the replacement driver |
 | `Hardware_Replace_By_Server.ps1` | Auto-replaces drivers per recording server (GridView server selection) |
 | `MassSelectDriver.ps1` | Select hardware via GridView and apply a specific driver |
+| `Get-DriverGuids.ps1` | Select a recording server, then list all available drivers with their GUIDs, numbers, and versions |
+| `Find-HardwareByDriver.ps1` | Select a recording server and list all hardware on it using a specific driver number |
 
 ### HTTPS Configuration
 | Script | Description |
