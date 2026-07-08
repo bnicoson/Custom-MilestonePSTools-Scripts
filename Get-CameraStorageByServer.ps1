@@ -17,7 +17,8 @@ if (-not $recorders) {
     return
 }
 
-$serverLabel = ($recorders | Measure-Object).Count -eq 1 ? $recorders.Name : "$(($recorders | Measure-Object).Count) servers"
+$serverCount = ($recorders | Measure-Object).Count
+$serverLabel = if ($serverCount -eq 1) { $recorders.Name } else { "$serverCount servers" }
 Write-Host "Building camera report for $serverLabel ..." -ForegroundColor Cyan
 
 # Scope the report to the selected server(s), and include retention info so

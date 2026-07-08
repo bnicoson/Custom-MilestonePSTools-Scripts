@@ -35,6 +35,7 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-MilestoneCameraRoles.ps1` | Exports all cameras and their role/permission assignments |
 | `Get-VMSCameraReport.ps1` | Exports a full camera list to CSV |
 | `Get-CameraStorageByServer.ps1` | Per-camera recording storage used - select one or more recording servers, view in GridView (sortable by driver), optional CSV export |
+| `Get-CameraSettingsReport.ps1` | Per-camera stream + motion settings (codec, resolution, FPS, bitrate/compression, GOP, Axis Zipstream, motion threshold/sensitivity) across selected servers, with a catch-all column for driver-specific keys; GridView + optional CSV export |
 | `Get-VMSHardware.ps1` | Exports a hardware list to CSV |
 | `Custom-Hardware-Report.ps1` | Extended hardware report including firmware, MAC, serial, and password - **output CSV contains passwords, handle accordingly** |
 | `Device-Status.ps1` | Exports camera device status to CSV |
