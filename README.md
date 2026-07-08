@@ -51,6 +51,11 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-DriverGuids.ps1` | Select a recording server, then list all available drivers with their GUIDs, numbers, and versions |
 | `Find-HardwareByDriver.ps1` | Select a recording server and list all hardware on it using a specific driver number |
 
+### Storage
+| Script | Description |
+|---|---|
+| `Set-CameraStorage.ps1` | Select a recording server, pick cameras via GridView, pick a target storage via GridView, then reassign those cameras to it (existing recordings stay in the old storage and age out) |
+
 ### HTTPS Configuration
 | Script | Description |
 |---|---|
