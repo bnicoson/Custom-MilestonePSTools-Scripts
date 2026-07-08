@@ -18,9 +18,21 @@ $Password = @{
     Name       = 'Password'
     Expression = { ($_ | Get-VmsHardwarePassword) }
 }
+# Build a GUID -> recording server name lookup so we can show the actual server name.
+$recorderByGuid = @{}
+Get-VmsRecordingServer | ForEach-Object { $recorderByGuid[$_.Id.ToString().ToLower()] = $_.Name }
+$RecordingServer = @{
+    Name       = 'RecordingServer'
+    Expression = {
+        if ($_.ParentItemPath -match '([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})') {
+            $g = $Matches[1].ToLower()
+            if ($recorderByGuid.ContainsKey($g)) { $recorderByGuid[$g] } else { $_.ParentItemPath }
+        } else { $_.ParentItemPath }
+    }
+}
 $default = "$env:USERPROFILE\Downloads\Hardware_List.csv"
 $OutputPath = Read-Host "Save to (press Enter for $default)"
 if ([string]::IsNullOrWhiteSpace($OutputPath)) { $OutputPath = $default }
 
-Get-VmsHardware -Verbose | Select-Object Enabled, Name, DisplayName, Address, $macProperty, $SerialNumber, Model, UserName, $Password, $Firmware, Guid, ParentItemPath, LastModified, Description | Export-Csv $OutputPath -NoTypeInformation
+Get-VmsHardware -Verbose | Select-Object Enabled, Name, DisplayName, Address, $macProperty, $SerialNumber, Model, UserName, $Password, $Firmware, Guid, $RecordingServer, ParentItemPath, LastModified, Description | Export-Csv $OutputPath -NoTypeInformation
 Write-Host "Exported to: $OutputPath" -ForegroundColor Green
