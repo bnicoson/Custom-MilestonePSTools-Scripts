@@ -52,6 +52,11 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-DriverGuids.ps1` | Select a recording server, then list all available drivers with their GUIDs, numbers, and versions |
 | `Find-HardwareByDriver.ps1` | Select a recording server and list all hardware on it using a specific driver number |
 
+### Camera Configuration
+| Script | Description |
+|---|---|
+| `Set-CameraStreamSettings.ps1` | Bulk-apply stream settings (FPS, resolution, codec, compression, Axis Zipstream) and motion settings across GridView-selected cameras on one or more recording servers. Menu is built from the first Axis camera and offers only each setting's valid values; includes a "highest resolution per camera" option. Preview, confirm, change log + optional CSV |
+
 ### Storage
 | Script | Description |
 |---|---|
