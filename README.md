@@ -58,6 +58,12 @@ Three scripts work together for rotating camera passwords across a site:
 |---|---|
 | `Set-CameraStreamSettings.ps1` | Bulk-apply stream settings (FPS, resolution, codec, compression, Axis Zipstream) and motion settings across GridView-selected cameras on one or more recording servers. Menu is built from the first Axis camera and offers only each setting's valid values; includes a "highest resolution per camera" option. Preview, confirm, change log + optional CSV |
 
+### Health / Status
+| Script | Description |
+|---|---|
+| `Compare-CameraHealth.ps1` | Snapshot mode captures every camera's online/offline status to a timestamped CSV; Compare mode diffs a before + after snapshot (matched by camera GUID) to show what went DOWN after an upgrade. Ideal for before/after maintenance checks |
+| `Get-StaleCameras.ps1` | Flags cameras with recording problems by age of last recorded footage: STALE (offline + old/never), CHECK (online but silently not recording), New HW (recently added, no recording yet), Rec Off (recording disabled by design). GridView + optional CSV |
+
 ### Storage
 | Script | Description |
 |---|---|
