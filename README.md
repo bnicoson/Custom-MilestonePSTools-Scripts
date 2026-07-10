@@ -69,6 +69,11 @@ Three scripts work together for rotating camera passwords across a site:
 |---|---|
 | `Set-CameraStorage.ps1` | Select a recording server, pick cameras via GridView, pick a target storage via GridView, then reassign those cameras to it (existing recordings stay in the old storage and age out) |
 
+### Load Balancing
+| Script | Description |
+|---|---|
+| `Balance-RecorderLoad.ps1` | Analyze recording load across selected recording servers and propose (then optionally execute) hardware moves to balance them. Load is a composite of recorded resolution, camera count, and storage used (recording-enabled channels only); servers are weighted by archive capacity. Holds back recently-moved hardware to protect recording history, saves a full plan CSV, and the move-selection GridView is the approval gate (only selected rows move via Move-VmsHardware). Plan-only unless you type `yes` |
+
 ### HTTPS Configuration
 | Script | Description |
 |---|---|
