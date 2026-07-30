@@ -1,0 +1,4 @@
+IP,Name,Username,Password,Driver,Port,RecordingServer,FPS,MotionDetection,MotionThreshold,DeviceGroup
+192.168.1.50,Parking Lot South East,,,,,,,,,
+192.168.1.51,Front Entrance,root,ChangeMe123!,806,,RecordingServer-01,15,Yes,200,/Site A
+192.168.1.52,Loading Dock,admin,ChangeMe123!,,8000,RecordingServer-01,10,No,,/Site A/Warehouse;/Site A/Docks

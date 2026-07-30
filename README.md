@@ -53,6 +53,11 @@ Three scripts work together for rotating camera passwords across a site:
 | `Get-DriverGuids.ps1` | Select a recording server, then list all available drivers with their GUIDs, numbers, and versions |
 | `Find-HardwareByDriver.ps1` | Select a recording server and list all hardware on it using a specific driver number |
 
+### Bulk Camera Add
+| Script | Description |
+|---|---|
+| `Add-CamerasFromCsv/Add-CamerasFromCsv.ps1` | Batch-add cameras from a CSV (via `Import-VmsHardware`; Axis auto-detect when the driver is blank), then per camera: enable **all** sensor channels (Import enables only channel 0), name the hardware/cameras/metadata `IP - Name`, enable metadata, set FPS + motion detection/threshold, apply compression + Axis Zipstream, add to `/Imported from CSV` plus any specified device groups, flag 360/multi-view cams, and write a firmware/config documentation report. Blank recording-server rows split round-robin across recorders picked at runtime. Bundled in its folder with a CSV template, a read-only environment probe, and a README |
+
 ### Camera Configuration
 | Script | Description |
 |---|---|
@@ -67,7 +72,7 @@ Three scripts work together for rotating camera passwords across a site:
 ### Storage
 | Script | Description |
 |---|---|
-| `Set-CameraStorage.ps1` | Select a recording server, pick cameras via GridView, pick a target storage via GridView, then reassign those cameras to it (existing recordings stay in the old storage and age out) |
+| `Set-DeviceStorage.ps1` | Select a recording server, pick devices via GridView (cameras, microphones, speakers, metadata), pick a target storage via GridView, then reassign those devices to it (existing recordings stay in the old storage and age out) |
 
 ### Load Balancing
 | Script | Description |
